@@ -30,7 +30,7 @@ export const listProducts =
       dispatch({ type: PRODUCT_LIST_REQUEST })
 
       const { data } = await axios.get(
-        `https://proshop-shopping-cart.herokuapp.com/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+        `https://proshop-shopping-cart.onrender.app/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
       )
 
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data })
@@ -50,7 +50,7 @@ export const listProductDetails = (id) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
     const { data } = await axios.get(
-      `https://proshop-shopping-cart.herokuapp.com/api/products/${id}`
+      `https://proshop-shopping-cart.onrender.app/api/products/${id}`
     )
 
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data })
@@ -80,7 +80,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
     }
 
     await axios.delete(
-      `https://proshop-shopping-cart.herokuapp.com/api/products/${id}`,
+      `https://proshop-shopping-cart.onrender.app/api/products/${id}`,
       config
     )
 
@@ -111,7 +111,7 @@ export const createProduct = () => async (dispatch, getState) => {
     }
 
     const { data } = await axios.post(
-      `https://proshop-shopping-cart.herokuapp.com/api/products/`,
+      `https://proshop-shopping-cart.onrender.app/api/products/`,
       {},
       config
     )
@@ -146,7 +146,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      `https://proshop-shopping-cart.herokuapp.com/api/products/${product._id}`,
+      `https://proshop-shopping-cart.onrender.app/api/products/${product._id}`,
       product,
       config
     )
@@ -183,7 +183,7 @@ export const createProductReview =
       }
 
       await axios.post(
-        `https://proshop-shopping-cart.herokuapp.com/api/products/${productId}/reviews`,
+        `https://proshop-shopping-cart.onrender.app/api/products/${productId}/reviews`,
         review,
         config
       )
@@ -207,7 +207,7 @@ export const listTopProducts = () => async (dispatch) => {
     })
 
     const { data } = await axios.get(
-      'https://proshop-shopping-cart.herokuapp.com/api/products/top'
+      'https://proshop-shopping-cart.onrender.app/api/products/top'
     )
 
     dispatch({

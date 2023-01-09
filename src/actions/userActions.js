@@ -39,7 +39,7 @@ export const login = (email, password) => async (dispatch) => {
     }
 
     const { data } = await axios.post(
-      'https://proshop-shopping-cart.herokuapp.com/api/users/login',
+      'https://proshop-shopping-cart.onrender.app/api/users/login',
       { email, password },
       config
     )
@@ -89,7 +89,7 @@ export const register = (name, email, password) => async (dispatch) => {
     }
 
     const { data } = await axios.post(
-      'https://proshop-shopping-cart.herokuapp.com/api/users/',
+      'https://proshop-shopping-cart.onrender.app/api/users/',
       { name, email, password },
       config
     )
@@ -133,7 +133,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.get(
-      `https://proshop-shopping-cart.herokuapp.com/api/users/${id}`,
+      `https://proshop-shopping-cart.onrender.app/api/users/${id}`,
       config
     )
 
@@ -170,7 +170,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      'https://proshop-shopping-cart.herokuapp.com/api/users/profile',
+      'https://proshop-shopping-cart.onrender.app/api/users/profile',
       user,
       config
     )
@@ -214,7 +214,7 @@ export const listUsers = () => async (dispatch, getState) => {
     }
 
     const { data } = await axios.get(
-      'https://proshop-shopping-cart.herokuapp.com/api/users/',
+      'https://proshop-shopping-cart.onrender.app/api/users/',
       config
     )
 
@@ -250,7 +250,7 @@ export const deleteUser = (id) => async (dispatch, getState) => {
     }
 
     await axios.delete(
-      `https://proshop-shopping-cart.herokuapp.com/api/users/${id}`,
+      `https://proshop-shopping-cart.onrender.app/api/users/${id}`,
       config
     )
 
@@ -286,7 +286,7 @@ export const updateUser = (user) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      `https://proshop-shopping-cart.herokuapp.com/api/users/${user._id}`,
+      `https://proshop-shopping-cart.onrender.app/api/users/${user._id}`,
       user,
       config
     )

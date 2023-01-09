@@ -38,7 +38,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.post(
-      'https://proshop-shopping-cart.herokuapp.com/api/orders',
+      'https://proshop-shopping-cart.onrender.app/api/orders',
       order,
       config
     )
@@ -75,7 +75,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.get(
-      `https://proshop-shopping-cart.herokuapp.com/api/orders/${id}`,
+      `https://proshop-shopping-cart.onrender.app/api/orders/${id}`,
       config
     )
 
@@ -113,7 +113,7 @@ export const payOrder =
       }
 
       const { data } = await axios.put(
-        `https://proshop-shopping-cart.herokuapp.com/api/orders/${orderId}/pay`,
+        `https://proshop-shopping-cart.onrender.app/api/orders/${orderId}/pay`,
         paymentResult,
         config
       )
@@ -150,7 +150,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
     }
 
     const { data } = await axios.get(
-      'https://proshop-shopping-cart.herokuapp.com/api/orders/myorders',
+      'https://proshop-shopping-cart.onrender.app/api/orders/myorders',
       config
     )
 
@@ -186,7 +186,7 @@ export const listOrders = () => async (dispatch, getState) => {
     }
 
     const { data } = await axios.get(
-      'https://proshop-shopping-cart.herokuapp.com/api/orders/',
+      'https://proshop-shopping-cart.onrender.app/api/orders/',
       config
     )
 
@@ -223,7 +223,7 @@ export const deliverOrder = (orderId) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      `https://proshop-shopping-cart.herokuapp.com/api/orders/${orderId}/deliver`,
+      `https://proshop-shopping-cart.onrender.app/api/orders/${orderId}/deliver`,
       {},
       config
     )
